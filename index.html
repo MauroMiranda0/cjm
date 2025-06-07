@@ -5,106 +5,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Despacho Legal</title>
-    <!-- Enlace a la hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome para los íconos sociales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <!-- Encabezado -->
-    <header class="cjm-header">
-        <div class="cjm-logo-block">
-            <div class="cjm-logo-svg">
-                <img src="Nueva carpeta/logo100x100.png" alt="logotipo">
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Nueva carpeta/logo100x100.png" alt="Corporativo Jurídico Metropolitano">
             </div>
-        </div>
-        
-        <div class="cjm-info-block">
-            <div class="cjm-hours-center">
-                <div class="cjm-hours">
-                    <span class="cjm-clock">🕒</span>
-                    <span class="cjm-time">9:00 - 19:00</span>
-                    <div class="cjm-subtext">Horario de Atención<br>Lunes - Viernes</div>
+            <div class="schedule">
+                <span class="clock">🕒</span>
+                <div>
+                    <strong>9:00 - 14:00</strong><br>
+                    <span>Horario de Atención<br>Lunes - Viernes</span>
                 </div>
             </div>
-            <div class="cjm-socials">
-                <div>
+            <nav class="nav" id="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <a href="#contacto" class="btn">Agendar consulta</a>
+            </nav>
+            <div class="socials">
+                <a href="#" aria-label="Facebook">
                     <span class="cjm-social-icon"><i class="fab fa-facebook-f"></i></span>
-                </div>
-                <div>
+                </a>
+                <a href="#" aria-label="Instagram">
                     <span class="cjm-social-icon"><i class="fab fa-instagram"></i></span>
-                </div>
-                <div>
+                </a>
+                <a href="#" aria-label="YouTube">
                     <span class="cjm-social-icon"><i class="fab fa-youtube"></i></span>
-                </div>
-                <div>
+                </a>
+                <a href="#" aria-label="LinkedIn">
                     <span class="cjm-social-icon"><i class="fab fa-linkedin-in"></i></span>
-                </div>
+                </a>
             </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">☰</button>
         </div>
     </header>
 
-    <!-- Navbar -->
-    <div class="cjm-navbar-container">
-        <div class="cjm-navbar-inner">
-            <div class="cjm-navbar-toggle" id="navbarToggle">☰</div>
-            <nav class="cjm-navbar" id="mainNavbar">
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#contacto">Contacto</a>
-                <a href="#blog">Blog</a>
-                <button class="cta-btn-navbar">Agendar consulta</button>
-            </nav>
-        </div>
-    </div>
-    
+    <main>
+        <section class="hero" id="inicio">
+            <h1>Defendiendo tus derechos con experiencia y compromiso</h1>
+            <p>Consulta gratuita disponible</p>
+            <button class="cta-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agenda tu consulta</button>
+        </section>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <h1>Defendiendo tus derechos con experiencia y compromiso</h1>
-        <p>Consulta gratuita disponible</p>
-        <button class="cta-btn" onclick="scrollToSection('contacto')">Agenda tu consulta</button>
-    </section>
+        <section class="section" id="sobre-mi">
+            <h2>¿Por qué elegirme?</h2>
+            <p>
+                Soy abogado con más de 10 años de experiencia en diversas ramas del derecho. Mi compromiso es ofrecer soluciones legales eficaces, con honestidad y dedicación personalizada para cada cliente.
+            </p>
+        </section>
 
-    <!-- Descripción breve -->
-    <section class="section" id="sobre-mi">
-        <h2>¿Por qué elegirme?</h2>
-        <p>
-            Soy abogado con más de 10 años de experiencia en diversas ramas del derecho. Mi compromiso es ofrecer soluciones legales eficaces, con honestidad y dedicación personalizada para cada cliente.
-        </p>
-    </section>
+        <section class="section" id="servicios">
+            <h2>Áreas de Especialización</h2>
+            <div class="cards">
+                <div class="card">⚖️ Derecho Penal</div>
+                <div class="card">📄 Derecho Civil</div>
+                <div class="card">👨‍👩‍👧‍👦 Derecho Familiar</div>
+                <div class="card">🏢 Derecho Corporativo</div>
+                <div class="card">👷 Derecho Laboral</div>
+            </div>
+        </section>
 
-    <!-- Áreas de especialización -->
-    <section class="section" id="servicios">
-        <h2>Áreas de Especialización</h2>
-        <div class="cards">
-            <div class="card">⚖️ Derecho Penal</div>
-            <div class="card">📄 Derecho Civil</div>
-            <div class="card">👨‍👩‍👧‍👦 Derecho Familiar</div>
-            <div class="card">🏢 Derecho Corporativo</div>
-            <div class="card">👷 Derecho Laboral</div>
-        </div>
-    </section>
+        <section class="section">
+            <h2>Lo que dicen mis clientes</h2>
+            <blockquote>
+                “Excelente atención y resultados. Siempre disponible para responder mis dudas.” – Juan Pérez
+            </blockquote>
+            <blockquote>
+                “Muy profesional, me ayudó a resolver un caso complicado con mucha dedicación.” – María López
+            </blockquote>
+        </section>
 
-    <!-- Testimonios -->
-    <section class="section">
-        <h2>Lo que dicen mis clientes</h2>
-        <blockquote>
-            “Excelente atención y resultados. Siempre disponible para responder mis dudas.” – Juan Pérez
-        </blockquote>
-        <blockquote>
-            “Muy profesional, me ayudó a resolver un caso complicado con mucha dedicación.” – María López
-        </blockquote>
-    </section>
+        <section class="section" style="text-align:center;">
+            <button class="cta-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Contáctame ahora</button>
+        </section>
+    </main>
 
-    <!-- Llamado a la acción -->
-    <section class="section" style="text-align:center;">
-        <button class="cta-btn" onclick="scrollToSection('contacto')">Contáctame ahora</button>
-    </section>
-
-    <!-- Pie de página -->
     <footer id="contacto">
         <p>Tel: (55) 1234-5678 | Email: contacto@tunombrelegal.com</p>
         <p>
@@ -113,9 +98,6 @@
         <p><a href="#">Aviso de privacidad</a></p>
     </footer>
 
-    <!-- Enlace al archivo JavaScript externo -->
     <script src="script.js"></script>
-
 </body>
-
 </html>
