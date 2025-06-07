@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Despacho Legal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        
+        .cta-btn {
+            background: #e63946;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .hero {
+            background: url('tu-imagen-profesional.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #ccc;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        footer a {
+            color: #e63946;
+            text-decoration: none;
+        }
+        /* Responsive */
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background: #1a1a1a;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                padding: 1rem;
+            }
+            nav.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            header {
+                flex-wrap: wrap;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">TuNombreLegal</div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav id="main-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#blog">Blog</a>
+            <button class="cta-btn" onclick="scrollToSection('contacto')">Agendar consulta</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <h1>Defendiendo tus derechos con experiencia y compromiso</h1>
+        <p>Consulta gratuita disponible</p>
+        <button class="cta-btn" onclick="scrollToSection('contacto')">Agenda tu consulta</button>
+    </section>
+
+    <!-- Descripción breve -->
+    <section class="section" id="sobre-mi">
+        <h2>¿Por qué elegirme?</h2>
+        <p>
+            Soy abogado con más de 10 años de experiencia en diversas ramas del derecho. Mi compromiso es ofrecer soluciones legales eficaces, con honestidad y dedicación personalizada para cada cliente.
+        </p>
+    </section>
+
+    <!-- Áreas de especialización -->
+    <section class="section" id="servicios">
+        <h2>Áreas de Especialización</h2>
+        <div class="cards">
+            <div class="card">⚖️ Derecho Penal</div>
+            <div class="card">📄 Derecho Civil</div>
+            <div class="card">👨‍👩‍👧‍👦 Derecho Familiar</div>
+            <div class="card">🏢 Derecho Corporativo</div>
+            <div class="card">👷 Derecho Laboral</div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section">
+        <h2>Lo que dicen mis clientes</h2>
+        <blockquote>
+            “Excelente atención y resultados. Siempre disponible para responder mis dudas.” – Juan Pérez
+        </blockquote>
+        <blockquote>
+            “Muy profesional, me ayudó a resolver un caso complicado con mucha dedicación.” – María López
+        </blockquote>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="section" style="text-align:center;">
+        <button class="cta-btn" onclick="scrollToSection('contacto')">Contáctame ahora</button>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <p>Tel: (55) 1234-5678 | Email: contacto@tunombrelegal.com</p>
+        <p>
+            <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+        </p>
+        <p><a href="#">Aviso de privacidad</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('main-nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
