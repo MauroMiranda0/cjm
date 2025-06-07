@@ -333,51 +333,6 @@ footer a:hover {
     }
 }
 
-/* --- RESPONSIVE 800px (AJUSTES ADICIONALES) --- */
-/* @media (max-width: 800px) {
-    .cjm-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem 0.5rem 0.5rem 0.5rem;
-    }
-    .cjm-logo-block {
-        justify-content: center;
-        width: 100%;
-    }
-    .cjm-info-block {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.7rem;
-        width: 100%;
-    }
-    .cjm-hours-center {
-        justify-content: center;
-        width: 100%;
-    }
-    .cjm-hours {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.2rem;
-        width: 100%;
-    }
-    .cjm-subtext {
-        text-align: center;
-        margin-left: 0;
-    }
-    .cjm-socials {
-        justify-content: center;
-        width: 100%;
-        gap: 1.2rem;
-        margin-top: 0.5rem;
-    }
-    .cjm-logo-svg img {
-        width: 80px;
-        height: 80px;
-        max-width: 90vw;
-    }
-} */
-
 /* --- RESPONSIVE 1400px --- */
 @media (min-width: 1400px) {
     .cjm-navbar-inner {
@@ -396,4 +351,21 @@ footer a:hover {
     top: 0;
     background: #2C3E50;
     z-index: 1200;
+}
+
+.cta-btn {
+  background-color: #d4ac2b;
+  color: #1c1c1c;
+  padding: 12px 28px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin: 1rem 0;
+}
+.cta-btn:hover {
+  background: #b7950b;
+  color: #fff;
 }
